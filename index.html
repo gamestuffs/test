@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Core Allocation Optimizer</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <h1>Core Allocation Optimizer</h1>
+
+  <!-- Resources -->
+  <section id="resources">
+    <h2>Resources</h2>
+    <label>EShards: <input type="number" id="eShards" value="0"></label>
+    <label>VShards: <input type="number" id="vShards" value="0"></label>
+    <label>RCores: <input type="number" id="relicCores" value="0"></label>
+    <label>ACores: <input type="number" id="awakeningCores" value="0"></label>
+    <label>SShards: <input type="number" id="sShards" value="0"></label>
+  </section>
+
+  <!-- Base Resonance -->
+  <section id="resonanceInputs" class="section">
+    <h2>Base Resonance</h2>
+    <label>Base Resonance (Drone / Force Field)
+      <input type="number" id="baseResonanceA" value="3000">
+    </label>
+    <label>Base Resonance (Drill / Rocket)
+      <input type="number" id="baseResonanceB" value="3000">
+    </label>
+    <label>Base Resonance (Durian / Soccer)
+      <input type="number" id="baseResonanceC" value="3000">
+    </label>
+    <label>RChips:
+      <input type="number" id="RChips" value="3000">
+    </label>
+  </section>
+
+  <!-- Part priority -->
+  <section id="priorityInputs" class="section">
+    <h2>Part Priority Weights <small>(higher = more important)</small></h2>
+    <label>Drone / Force Priority <input type="number" step="0.01" id="priorityDrone" value="1.7"></label>
+    <label>Drill / Rocket Priority <input type="number" step="0.01" id="priorityDrill" value="1.05"></label>
+    <label>Durian / Soccer Priority <input type="number" step="0.01" id="priorityDurian" value="0.4"></label>
+  </section>
+
+  <!-- Survivors -->
+  <section id="survivorPanel" class="section">
+  <h2>Survivor Setup</h2>
+</section>
+
+  <!-- Collectables -->
+  <section id="collectablesSection" class="section">
+    <h2>Collectables</h2>
+    <div id="collectablesGrid" class="grid-collectables"></div>
+    <pre id="collectableBonusOutput" class="panel"></pre>
+    <pre id="collectableSetDebug" class="panel"></pre>
+  </section>
+
+  <!-- Gear -->
+  <section id="gearSection" class="section">
+    <h2>Gear Bonuses</h2>
+    <div id="gearGrid" class="grid-gear"></div>
+    <pre id="gearBonusOutput" class="panel"></pre>
+  </section>
+
+  <!-- Load your data exactly as you have it now -->
+  <script src="data/collectables_with_rarity.js"></script>
+  <script src="data/collection_sets.js"></script>
+  <script src="data/gear.js"></script>
+  <script src="data/survivors.js"></script>
+
+<!-- Combined Bonus Output -->
+<pre id="finalBonusBox" style="background: #111; color: #0f0; padding: 10px; margin-top: 20px; white-space: pre-wrap;"></pre>
+
+  <!-- App modules -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+body { font-family: system-ui, sans-serif; color: #eee; background:#111; padding:18px; }
+h1,h2 { margin: 8px 0 12px; }
+.section { margin: 16px 0 24px; }
+label { display:block; margin:6px 0; }
+.grid-collectables { display:grid; grid-template-columns:repeat(auto-fit, minmax(92px, 1fr)); gap:10px; }
+.grid-gear { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:10px; }
+.panel { background:#1a1a1a; border:1px solid #333; padding:10px; white-space:pre-wrap; }
+select, input { background:#222; color:#eee; border:1px solid #444; padding:4px; }
